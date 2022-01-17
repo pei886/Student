@@ -12,6 +12,7 @@ import java.time.LocalDate;
 public class Students {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "full_name")
@@ -23,9 +24,6 @@ public class Students {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "dob")
-    private LocalDate dob;
-
     @Column(name = "gender")
     private String gender;
 
@@ -34,6 +32,34 @@ public class Students {
 
     @Column(name = "age")
     private Integer age;
+
+    public int getId() {
+        return id;
+    }
+
+    public String getFull_name() {
+        return full_name;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
 
     public void setId(int id) {
         this.id = id;
@@ -49,10 +75,6 @@ public class Students {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public void setDob(LocalDate dob) {
-        this.dob = dob;
     }
 
     public void setGender(String gender) {
