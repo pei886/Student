@@ -10,8 +10,4 @@ import java.util.List;
 @Repository
 public interface StudentRepository extends CrudRepository<Students, Integer> {
 
-//    @Query("select password from students where full_name = 'Helen Pei'")
-//    List<Students> getPasswordByName();
-//
-//    void registerNewStudent(Students students);
 }

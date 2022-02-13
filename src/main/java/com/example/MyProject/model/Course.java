@@ -2,27 +2,25 @@ package com.example.MyProject.model;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "course")
 @Data
 public class Course {
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
+//    public void setId(Integer id) {
+//        this.id = id;
+//    }
+//
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     Integer id;
 
-    @Column
+    @Column(name = "course_name")
     private String course_name;
 
-    @Column
+    @Column(name = "teacher_name")
     private String teacher_name;
 
     @Column
